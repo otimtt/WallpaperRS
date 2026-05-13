@@ -1,0 +1,40 @@
+[package]
+name    = "wallpaper-rs"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "wallpaper-rs"
+path = "src/main.rs"
+
+[dependencies]
+wallpaper-core            = { path = "../core" }
+wallpaper-platform-win    = { path = "../platform-win" }
+wallpaper-renderer-shader = { path = "../renderer-shader" }
+wallpaper-renderer-video  = { path = "../renderer-video" }
+wallpaper-renderer-scene  = { path = "../renderer-scene" }
+wallpaper-renderer-web    = { path = "../renderer-web" }
+
+anyhow     = { workspace = true }
+log        = { workspace = true }
+env_logger = { workspace = true }
+serde      = { workspace = true }
+serde_json = { workspace = true }
+tokio      = { workspace = true }
+wgpu       = { workspace = true }
+winit      = { workspace = true }
+egui       = { workspace = true }
+eframe     = { workspace = true }
+egui-wgpu         = { workspace = true }
+image             = { version = "0.25", default-features = false, features = ["png"] }
+raw-window-handle = { workspace = true }
+
+[target.'cfg(target_os = "windows")'.dependencies]
+tray-icon = "0.19"
+
+[build-dependencies]
+ico   = "0.3"
+image = { version = "0.25", default-features = false, features = ["png"] }
+
+[target.'cfg(target_os = "windows")'.build-dependencies]
+winres = "0.1"

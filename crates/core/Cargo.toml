@@ -1,0 +1,14 @@
+[package]
+name    = "wallpaper-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow     = { workspace = true }
+log        = { workspace = true }
+serde      = { workspace = true }
+serde_json = { workspace = true }
+wgpu       = { workspace = true }
+winit      = { workspace = true }
+bytemuck   = { workspace = true }
+tokio      = { workspace = true }

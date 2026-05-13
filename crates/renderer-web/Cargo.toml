@@ -1,0 +1,19 @@
+[package]
+name    = "wallpaper-renderer-web"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wallpaper-core = { path = "../core" }
+anyhow         = { workspace = true }
+log            = { workspace = true }
+wgpu           = { workspace = true }
+serde          = { workspace = true }
+
+[target.'cfg(target_os = "windows")'.dependencies]
+windows = { version = "0.58", features = [
+    "Win32_Foundation",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_System_Com",
+] }
+webview2-com = "0.35"
