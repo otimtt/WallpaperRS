@@ -6,6 +6,12 @@ A high-performance animated wallpaper engine for Windows, built with Rust + WGPU
 ![Platform](https://img.shields.io/badge/Platform-Windows-blue?logo=windows)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+## Download
+
+> **[Releases →](../../releases/latest)**  Download the latest `.zip`, extract, and run `wallpaper-rs.exe`. No installation required.
+
+**Requirements:** Windows 10/11 · DirectX 12 GPU · [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/) (pre-installed on Windows 11; for web wallpapers only)
+
 ## Features
 
 - **WGSL Shaders** — real-time animated shaders rendered directly to the desktop
