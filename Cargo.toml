@@ -1,0 +1,34 @@
+[workspace]
+members = [
+    "crates/core",
+    "crates/platform-win",
+    "crates/renderer-shader",
+    "crates/renderer-video",
+    "crates/renderer-scene",
+    "crates/renderer-web",
+    "crates/app",
+]
+resolver = "2"
+
+[workspace.dependencies]
+anyhow     = "1"
+log        = "0.4"
+env_logger = "0.11"
+serde      = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio      = { version = "1", features = ["full"] }
+bytemuck   = { version = "1", features = ["derive"] }
+
+wgpu               = "22"
+winit              = "0.30"
+raw-window-handle  = "0.6"
+egui    = "0.29"
+eframe  = { version = "0.29", default-features = false, features = ["wgpu", "default_fonts"] }
+egui-wgpu  = "0.29"
+egui-winit = "0.29"
+
+[profile.release]
+opt-level     = 3
+lto           = "thin"
+codegen-units = 1
+strip         = true

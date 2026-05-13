@@ -1,0 +1,6 @@
+/target
+*.pdb
+*.exe
+*.ico
+*.tmp
+.env

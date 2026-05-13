@@ -1,0 +1,12 @@
+[package]
+name    = "wallpaper-renderer-scene"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wallpaper-core = { path = "../core" }
+anyhow         = { workspace = true }
+log            = { workspace = true }
+wgpu           = { workspace = true }
+bytemuck       = { workspace = true }
+serde          = { workspace = true }
